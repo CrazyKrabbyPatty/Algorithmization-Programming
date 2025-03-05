@@ -1,5 +1,6 @@
 ﻿#include <iostream>
 #include <cmath>
+#include <iomanip>
 
 //2 < x < 7
 //y = 3x2−2
@@ -32,6 +33,6 @@ int main() {
     double result_one = simpson_rule(function_one, 2, 7, 1000);
     double result_two = simpson_rule(function_two, 2, 7, 1000);
     double result = result_one - result_two;
-    std::cout << "Приближенное значение интеграла: " << result << std::endl;
+    std::cout << std::setprecision(20) << "Приближенное значение интеграла: " << result << std::endl;
     return 0;
 }
