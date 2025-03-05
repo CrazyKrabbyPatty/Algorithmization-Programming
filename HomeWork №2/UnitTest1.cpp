@@ -16,7 +16,7 @@ namespace UnitTest1
 			double result_one = simpson_rule(function_one, 2, 7, 2);
 			double result_two = simpson_rule(function_two, 2, 7, 2);
 			double result = result_one - result_two;
-			Assert::AreEqual(result, a, 10, L"Значения совпали с точностью до 3-ёх");
+			Assert::AreEqual(result, a, 10, L"Значения совпали с точностью до 10-и");
 		}
 
 		TEST_METHOD(AlmostEqual_N_10)
@@ -24,7 +24,7 @@ namespace UnitTest1
 			double result_one = simpson_rule(function_one, 2, 7, 10);
 			double result_two = simpson_rule(function_two, 2, 7, 10);
 			double result = result_one - result_two;
-			Assert::AreEqual(result, a, 10, L"Значения совпали с точностью до 3-ёх");
+			Assert::AreEqual(result, a, 10, L"Значения совпали с точностью до 10-и");
 		}
 
 		TEST_METHOD(AlmostEqual_N_100)
@@ -32,7 +32,8 @@ namespace UnitTest1
 			double result_one = simpson_rule(function_one, 2, 7, 100);
 			double result_two = simpson_rule(function_two, 2, 7, 100);
 			double result = result_one - result_two;
-			Assert::AreEqual(result, a, 10, L"Значения совпали с точностью до 3-ёх");
+			Assert::AreEqual(result, a, 10, L"Значения совпали с точностью до 10-и");
 		}
 	};
 }
+

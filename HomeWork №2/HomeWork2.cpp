@@ -30,9 +30,10 @@ double function_two(double x) {
 
 int main() {
     setlocale(LC_ALL, "RU");
-    double result_one = simpson_rule(function_one, 2, 7, 1000);
-    double result_two = simpson_rule(function_two, 2, 7, 1000);
+    double result_one = simpson_rule(function_one, 2, 7, 50);
+    double result_two = simpson_rule(function_two, 2, 7, 50);
     double result = result_one - result_two;
     std::cout << std::setprecision(20) << "Приближенное значение интеграла: " << result << std::endl;
     return 0;
 }
+
