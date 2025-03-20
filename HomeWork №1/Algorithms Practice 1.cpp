@@ -5,20 +5,20 @@
 
 template <typename Func, typename... Args>
 auto measure_execution_time(Func&& func, Args&&... args) {
-    auto start_time = std::chrono::high_resolution_clock::now();  // ГЌГ Г·ГЁГ­Г ГҐГ¬ Г®ГІГ±Г·ГҐГІ ГўГ°ГҐГ¬ГҐГ­ГЁ
-    std::forward<Func>(func)(std::forward<Args>(args)...);  // Г‚Г»ГЇГ®Г«Г­ГїГҐГ¬ ГЇГҐГ°ГҐГ¤Г Г­Г­ГіГѕ ГґГіГ­ГЄГ¶ГЁГѕ
-    auto end_time = std::chrono::high_resolution_clock::now();  // ГЋГ±ГІГ Г­Г ГўГ«ГЁГўГ ГҐГ¬ Г®ГІГ±Г·ГҐГІ ГўГ°ГҐГ¬ГҐГ­ГЁ
-    auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end_time - start_time);  // Г‚Г»Г·ГЁГ±Г«ГїГҐГ¬ ГЇГ°Г®Г¤Г®Г«Г¦ГЁГІГҐГ«ГјГ­Г®Г±ГІГј Гў Г¬ГЁГ«Г«ГЁГ±ГҐГЄГіГ­Г¤Г Гµ
-    return duration.count();  // Г‚Г®Г§ГўГ°Г Г№Г ГҐГ¬ Г°ГҐГ§ГіГ«ГјГІГ ГІ ГЁ ГўГ°ГҐГ¬Гї ГўГ»ГЇГ®Г«Г­ГҐГ­ГЁГї
+    auto start_time = std::chrono::high_resolution_clock::now();  // Начинаем отсчет времени
+    std::forward<Func>(func)(std::forward<Args>(args)...);  // Выполняем переданную функцию
+    auto end_time = std::chrono::high_resolution_clock::now();  // Останавливаем отсчет времени
+    auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end_time - start_time);  // Вычисляем продолжительность в миллисекундах
+    return duration.count();  // Возвращаем результат и время выполнения
 }
 
 int Insert()
 {
-    std::cout << "Г‚ГўГҐГ¤ГЁГІГҐ Г¤ГЁГ ГЇГ®Г§Г®Г­ :\n";
+    std::cout << "Введите диапозон :\n";
     int x;
-    while (!(std::cin >> x) or std::cin.get() != '\n')
+    while (!(std::cin >> x) || std::cin.get() != '\n')
     {
-        std::cout << "Error!" <<std:: endl << "Г‚ГўГҐГ¤ГЁГІГҐ Г·ГЁГ±Г«Г®ГўГ®ГҐ Г§Г­Г Г·ГҐГ­ГЁГҐ :";
+        std::cout << "Error!" <<std:: endl << "Введите числовое значение :";
         std::cin.clear();
         while (std::cin.get() != '\n');
     }
@@ -46,10 +46,10 @@ void RemoveNumbersFromEnd(std::vector<int>& arr) {
 
 int main()
 {
-    setlocale(LC_ALL, "");
+    setlocale(LC_ALL, "ru");
     int n = Insert();
     std::vector<int> arr = CreateArray(n);
     float execution_time = measure_execution_time(RemoveNumbersFromEnd, arr);
-    std::cout << "Г‚Г°ГҐГ¬Гї ГўГ»ГЇГ®Г«Г­ГҐГ­ГЁГї: " << execution_time << " Г¬Г±" << std::endl;
+    std::cout << "Время выполнения: " << execution_time << " мс" << std::endl;
 
 }
