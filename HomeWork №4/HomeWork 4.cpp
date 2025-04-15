@@ -5,9 +5,8 @@
 #include <thread>
 
 std::vector<int> array;
-const int ARRAY_SIZE = 500000000;
 
-void generateArray() {
+void generateArray(int ARRAY_SIZE) {
     array.clear();
     std::random_device rd;
     std::mt19937 gen(rd());
@@ -88,9 +87,18 @@ int main()
 {
     setlocale(LC_ALL, "ru");
 
-    generateArray();
-    double QuickSort_Time = measure_execution_time(QuickSort, array, 0, array.size() - 1);
+    int array_size = 10000000;
 
-    std::cout << "Г‚Г°ГҐГ¬Гї ГўГ»ГЇГ®Г«Г­ГҐГ­ГЁГї ГЎГ»Г±ГІГ°Г®Г© Г±Г®Г°ГІГЁГ°Г®ГўГЄГЁ: " << QuickSort_Time << "Г¬Г±" << std::endl;
+    generateArray(array_size);
+    double QuickSort_threading_2 = measure_execution_time(QuickSort_threading, array, 2);
+    std::cout << "Время выполнения быстрой сортировки c двумя потоками: " << QuickSort_threading_2 << "мс" << std::endl;
+
+    generateArray(array_size);
+    double QuickSort_threading_4 = measure_execution_time(QuickSort_threading, array, 4);
+    std::cout << "Время выполнения быстрой сортировки c четырьмя потоками: " << QuickSort_threading_4 << "мс" << std::endl;
+
+    generateArray(array_size);
+    double QuickSort_threading_8 = measure_execution_time(QuickSort_threading, array, 8);
+    std::cout << "Время выполнения быстрой сортировки c восьмью потоками: " << QuickSort_threading_8 << "мс" << std::endl;
 
 }
