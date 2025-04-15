@@ -91,6 +91,6 @@ int main()
     generateArray();
     double QuickSort_Time = measure_execution_time(QuickSort, array, 0, array.size() - 1);
 
-    std::cout << "Âðåìÿ âûïîëíåíèÿ áûñòðîé ñîðòèðîâêè: " << QuickSort_Time << "ìñ" << std::endl;
+    std::cout << "Ã‚Ã°Ã¥Ã¬Ã¿ Ã¢Ã»Ã¯Ã®Ã«Ã­Ã¥Ã­Ã¨Ã¿ Ã¡Ã»Ã±Ã²Ã°Ã®Ã© Ã±Ã®Ã°Ã²Ã¨Ã°Ã®Ã¢ÃªÃ¨: " << QuickSort_Time << "Ã¬Ã±" << std::endl;
 
 }
