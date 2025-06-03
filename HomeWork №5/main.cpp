@@ -47,10 +47,6 @@ double haversine(const Coord& coord1, const Coord& coord2) {
 }
 
 // Функция dijkstra: поиск кратчайшего пути в графе
-// graph: Граф представленный в виде словаря: {координата: список {(соседняя координата, расстояние)}}
-// start: стартовая координата
-// end: конечная координата
-// Возвращает кортеж (путь, общее расстояние) ps - т.к. список улиц все равно возвращался пустым, убрал его из функции
 tuple<vector<Coord>, double> dijkstra(const Graph& graph, const Coord& start, const Coord& end) {
     auto start_time = chrono::high_resolution_clock::now();
 
