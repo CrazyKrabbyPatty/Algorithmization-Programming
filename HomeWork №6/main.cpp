@@ -13,11 +13,11 @@ using namespace sf;
 
 Font font;
 
-int GRID_SIZE = 10; // Размер поля NxN (изменил для изначально для задания варианта)
-int CELL_SIZE = 75; // Размер одной ячейки в пикселях
+int GRID_SIZE = 10; // ГђГ Г§Г¬ГҐГ° ГЇГ®Г«Гї NxN (ГЁГ§Г¬ГҐГ­ГЁГ« Г¤Г«Гї ГЁГ§Г­Г Г·Г Г«ГјГ­Г® Г¤Г«Гї Г§Г Г¤Г Г­ГЁГї ГўГ Г°ГЁГ Г­ГІГ )
+int CELL_SIZE = 75; // ГђГ Г§Г¬ГҐГ° Г®Г¤Г­Г®Г© ГїГ·ГҐГ©ГЄГЁ Гў ГЇГЁГЄГ±ГҐГ«ГїГµ
 const int WINDOW_SIZE = 750;
 
-// Типы ячеек
+// Г’ГЁГЇГ» ГїГ·ГҐГҐГЄ
 enum CellType {
     EMPTY,
     OBSTACLE,
@@ -28,16 +28,16 @@ enum CellType {
     QUEUED
 };
 
-// Структура для представления ячейки
+// Г‘ГІГ°ГіГЄГІГіГ°Г  Г¤Г«Гї ГЇГ°ГҐГ¤Г±ГІГ ГўГ«ГҐГ­ГЁГї ГїГ·ГҐГ©ГЄГЁ
 struct Cell {
     int x, y;
     CellType type;
-    int f, g, h, weight; // Для алгоритма A*
+    int f, g, h, weight; // Г„Г«Гї Г Г«ГЈГ®Г°ГЁГІГ¬Г  A*
     Cell* parent;
 
     Cell(int x, int y) : x(x), y(y), type(EMPTY), f(0), g(INT_MAX), h(0), weight(0), parent(nullptr) {}
 
-    // Перезагрузка оператора == для сравнения ячеек
+    // ГЏГҐГ°ГҐГ§Г ГЈГ°ГіГ§ГЄГ  Г®ГЇГҐГ°Г ГІГ®Г°Г  == Г¤Г«Гї Г±Г°Г ГўГ­ГҐГ­ГЁГї ГїГ·ГҐГҐГЄ
     bool operator==(const Cell& other) const {
         return x == other.x && y == other.y;
     }
@@ -47,12 +47,12 @@ struct Cell {
     }
 };
 
-// Функция для вычисления эвристики (манхэттенское расстояние)
+// Г”ГіГ­ГЄГ¶ГЁГї Г¤Г«Гї ГўГ»Г·ГЁГ±Г«ГҐГ­ГЁГї ГЅГўГ°ГЁГ±ГІГЁГЄГЁ (Г¬Г Г­ГµГЅГІГІГҐГ­Г±ГЄГ®ГҐ Г°Г Г±Г±ГІГ®ГїГ­ГЁГҐ)
 int heuristic(const Cell& a, const Cell& b) {
     return abs(a.x - b.x) + abs(a.y - b.y);
 }
 
-// Функция для проверки, находится ли ячейка в пределах сетки
+// Г”ГіГ­ГЄГ¶ГЁГї Г¤Г«Гї ГЇГ°Г®ГўГҐГ°ГЄГЁ, Г­Г ГµГ®Г¤ГЁГІГ±Гї Г«ГЁ ГїГ·ГҐГ©ГЄГ  Гў ГЇГ°ГҐГ¤ГҐГ«Г Гµ Г±ГҐГІГЄГЁ
 bool isValid(int x, int y) {
     return (x >= 0) and (x < GRID_SIZE) and (y >= 0) and (y < GRID_SIZE);
 }
@@ -171,7 +171,7 @@ void draw_grid(RenderWindow& window, vector<vector<Cell>>& grid) {
 
             window.draw(cell);
 
-            // Отображение веса клетки (для карты)
+            // ГЋГІГ®ГЎГ°Г Г¦ГҐГ­ГЁГҐ ГўГҐГ±Г  ГЄГ«ГҐГІГЄГЁ (Г¤Г«Гї ГЄГ Г°ГІГ»)
             if (grid[x][y].weight != 0) {
                 Text weightText;
                 weightText.setFont(font);
