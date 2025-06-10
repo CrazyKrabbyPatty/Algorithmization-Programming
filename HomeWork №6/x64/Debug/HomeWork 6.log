@@ -1,0 +1,15 @@
+﻿  main.cpp
+C:\Users\crazy\source\repos\HomeWork 6\HomeWork 6\main.cpp(135,28): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\crazy\source\repos\HomeWork 6\HomeWork 6\main.cpp(157,53): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\crazy\source\repos\HomeWork 6\HomeWork 6\main.cpp(157,53): warning C4244:         with
+C:\Users\crazy\source\repos\HomeWork 6\HomeWork 6\main.cpp(157,53): warning C4244:         [
+C:\Users\crazy\source\repos\HomeWork 6\HomeWork 6\main.cpp(157,53): warning C4244:             T=float
+C:\Users\crazy\source\repos\HomeWork 6\HomeWork 6\main.cpp(157,53): warning C4244:         ]
+C:\Users\crazy\source\repos\HomeWork 6\HomeWork 6\main.cpp(157,42): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\crazy\source\repos\HomeWork 6\HomeWork 6\main.cpp(157,42): warning C4244:         with
+C:\Users\crazy\source\repos\HomeWork 6\HomeWork 6\main.cpp(157,42): warning C4244:         [
+C:\Users\crazy\source\repos\HomeWork 6\HomeWork 6\main.cpp(157,42): warning C4244:             T=float
+C:\Users\crazy\source\repos\HomeWork 6\HomeWork 6\main.cpp(157,42): warning C4244:         ]
+C:\Users\crazy\source\repos\HomeWork 6\HomeWork 6\main.cpp(158,47): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\crazy\source\repos\HomeWork 6\HomeWork 6\main.cpp(158,32): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  HomeWork 6.vcxproj -> C:\Users\crazy\source\repos\HomeWork 6\x64\Debug\HomeWork 6.exe
