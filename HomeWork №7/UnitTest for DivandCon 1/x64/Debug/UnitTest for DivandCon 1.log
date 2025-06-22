@@ -1,0 +1,28 @@
+﻿  pch.cpp
+  UnitTest for DivandCon 1.cpp
+C:\Users\crazy\source\repos\HomeWork 7\Divide and Conquer 1\Divide and Conquer 1.cpp(68,11): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file '/UnitTest%20for%20DivandCon%201.cpp')
+  
+C:\Users\crazy\source\repos\HomeWork 7\UnitTest for DivandCon 1\UnitTest for DivandCon 1.cpp(18,48): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file '/UnitTest%20for%20DivandCon%201.cpp')
+  
+C:\Users\crazy\source\repos\HomeWork 7\UnitTest for DivandCon 1\UnitTest for DivandCon 1.cpp(30,48): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file '/UnitTest%20for%20DivandCon%201.cpp')
+  
+C:\Users\crazy\source\repos\HomeWork 7\UnitTest for DivandCon 1\UnitTest for DivandCon 1.cpp(42,48): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file '/UnitTest%20for%20DivandCon%201.cpp')
+  
+C:\Users\crazy\source\repos\HomeWork 7\UnitTest for DivandCon 1\UnitTest for DivandCon 1.cpp(54,48): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file '/UnitTest%20for%20DivandCon%201.cpp')
+  
+C:\Users\crazy\source\repos\HomeWork 7\UnitTest for DivandCon 1\UnitTest for DivandCon 1.cpp(66,48): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file '/UnitTest%20for%20DivandCon%201.cpp')
+  
+C:\Users\crazy\source\repos\HomeWork 7\UnitTest for DivandCon 1\UnitTest for DivandCon 1.cpp(78,48): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file '/UnitTest%20for%20DivandCon%201.cpp')
+  
+C:\Users\crazy\source\repos\HomeWork 7\UnitTest for DivandCon 1\UnitTest for DivandCon 1.cpp(96,48): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file '/UnitTest%20for%20DivandCon%201.cpp')
+  
+     Creating library C:\Users\crazy\source\repos\HomeWork 7\x64\Debug\UnitTest for DivandCon 1.lib and object C:\Users\crazy\source\repos\HomeWork 7\x64\Debug\UnitTest for DivandCon 1.exp
+  UnitTest for DivandCon 1.vcxproj -> C:\Users\crazy\source\repos\HomeWork 7\x64\Debug\UnitTest for DivandCon 1.dll
